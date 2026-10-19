@@ -1,0 +1,1 @@
+# Preserves dist directory for go:embed all:dist

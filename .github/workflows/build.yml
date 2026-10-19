@@ -48,7 +48,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
           cache: 'npm'
 
       - name: Install Linux Build Dependencies
@@ -60,11 +60,14 @@ jobs:
       - name: Install Wails CLI
         run: go install github.com/wailsapp/wails/v2/cmd/wails@latest
 
-      - name: Run Unit Tests
-        run: go test -v ./...
-
       - name: Install Frontend Dependencies
         run: npm install
+
+      - name: Build Frontend Assets
+        run: npm run build
+
+      - name: Run Unit Tests
+        run: go test -v ./...
 
       - name: Compile Application with Wails
         run: wails build -platform ${{ matrix.platform }} -clean
