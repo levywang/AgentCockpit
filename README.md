@@ -13,6 +13,7 @@
   <img src="https://img.shields.io/badge/Framework-Wails%20v2-DF1A29?style=flat-square" alt="Wails v2" />
   <img src="https://img.shields.io/badge/OS-Windows%20(Multi--Monitor)-0078D6?style=flat-square&logo=windows" alt="Windows" />
   <img src="https://img.shields.io/badge/Config-YAML%20%2B%20JSON-orange?style=flat-square" alt="YAML Config" />
+  <img src="https://img.shields.io/badge/CI-GitHub%20Actions-blue?style=flat-square&logo=githubactions" alt="CI" />
   <img src="https://img.shields.io/badge/License-MIT-green?style=flat-square" alt="License" />
 </p>
 
@@ -232,7 +233,7 @@ agent-cockpit/
 - [Node.js](https://nodejs.org/) 18+
 - [Wails CLI v2](https://wails.io/) (`go install github.com/wailsapp/wails/v2/cmd/wails@latest`)
 
-### 编译可执行程序
+### 本地编译可执行程序
 运行以下命令构建纯净独立的 Windows 可执行程序（无 CMD 终端黑框）：
 
 ```bash
@@ -241,6 +242,20 @@ wails build
 ```
 
 构建完成后，程序将生成于 `build/bin/agent-cockpit.exe`。
+
+### 🌐 GitHub CI 自动化交叉编译 (多平台支持)
+
+本项目已配置完整的 **GitHub Actions CI/CD 流水线** (`.github/workflows/build.yml`)，支持在云端矩阵原生并发交叉编译 4 大平台版本：
+
+| 平台架构 | 操作系统 | 构建产物 |
+| :--- | :--- | :--- |
+| **Windows x86_64** | `windows/amd64` | `agent-cockpit-windows-amd64.exe` / `.zip` |
+| **Windows ARM64** | `windows/arm64` | `agent-cockpit-windows-arm64.exe` / `.zip` |
+| **macOS Universal** | `darwin/universal` | `agent-cockpit-macos-universal.zip` (含 Apple Silicon + Intel) |
+| **Linux x86_64** | `linux/amd64` | `agent-cockpit-linux-amd64.tar.gz` |
+
+- **CI 触发策略**：每当向 `main` 分支提交代码或发起 Pull Request 时自动运行单元测试与全平台编译测试；
+- **自动 Release 发布**：推送 Git Tag（如 `git tag v1.0.0 && git push --tags`）时，自动打包并在 GitHub Release 页面发布所有架构的独立二进制与分发压缩包。
 
 ---
 

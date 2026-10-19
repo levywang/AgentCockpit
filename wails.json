@@ -3,9 +3,9 @@
   "name": "agent-cockpit",
   "outputfilename": "agent-cockpit",
   "frontend:dir": ".",
-  "frontend:install": "npm.cmd install",
-  "frontend:build": "npm.cmd run build",
-  "frontend:dev:watcher": "npm.cmd run dev",
+  "frontend:install": "npm install",
+  "frontend:build": "npm run build",
+  "frontend:dev:watcher": "npm run dev",
   "frontend:dev:serverUrl": "auto",
   "wailsjsdir": "./src",
   "author": {
