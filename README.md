@@ -2,6 +2,7 @@
 > *Autonomous AI Agent Cockpit, Workspace Watcher & Multi-Monitor Lock Screen / Live Wallpaper*
 
 <p align="center">
+  <img src="logo.png" alt="Agent Cockpit Logo" width="120" height="120" style="border-radius: 16px;" /><br>
   <b>Futuristic AI Agent Cockpit, Real-time Workspace Watcher & Multi-Monitor Lock Screen / Live Wallpaper</b><br>
   使用 <b>Go + Wails v2 + React 19 + TypeScript</b> 打造的硬核赛博风多屏桌面座舱与 AI 智能体调度监控大盘
 </p>
@@ -240,6 +241,12 @@ wails build
 ```
 
 构建完成后，程序将生成于 `build/bin/agent-cockpit.exe`。
+
+---
+
+## 🙏 致谢与灵感来源 (Inspiration & Thanks)
+
+本项目灵感来源自：[cyberdaddyleo/agent-display](https://github.com/cyberdaddyleo/agent-display)，特此感谢！
 
 ---
 

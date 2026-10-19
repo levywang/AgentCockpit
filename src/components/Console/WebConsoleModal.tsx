@@ -128,7 +128,8 @@ export const WebConsoleModal: React.FC = () => {
       <div className="lock-modal console-modal" style={{ maxWidth: '640px' }}>
         {/* Header */}
         <div className="lock-modal-hdr">
-          <div className="lock-badge" style={{ color: 'var(--accent)' }}>
+          <div className="lock-badge" style={{ color: 'var(--accent)', display: 'flex', alignItems: 'center', gap: '6px' }}>
+            <img src="/logo.png" alt="logo" style={{ width: '18px', height: '18px', borderRadius: '4px', objectFit: 'contain' }} />
             ⚙ AGENT COCKPIT // 核心功能控制中心
           </div>
           <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
