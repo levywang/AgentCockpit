@@ -1,0 +1,12 @@
+passcode: "1234"
+speed: 1
+theme: dark
+mode: windowed
+autoLockMinutes: 0
+lockOnStartup: false
+windowed: true
+aiWatcherEnabled: true
+tvNoiseEffect: false
+mosaicEffect: false
+scanlineEffect: false
+workspaceDir: .

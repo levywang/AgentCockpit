@@ -1,0 +1,15 @@
+{
+  "$schema": "https://wails.io/schemas/config.v2.json",
+  "name": "agent-cockpit",
+  "outputfilename": "agent-cockpit",
+  "frontend:dir": ".",
+  "frontend:install": "npm.cmd install",
+  "frontend:build": "npm.cmd run build",
+  "frontend:dev:watcher": "npm.cmd run dev",
+  "frontend:dev:serverUrl": "auto",
+  "wailsjsdir": "./src",
+  "author": {
+    "name": "AgentCockpit",
+    "email": "ops@agent.internal"
+  }
+}
