@@ -15,24 +15,9 @@ export const MetricRail: React.FC = () => {
 
   return (
     <header className="top">
-      <div className="cell title" style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-        <img
-          src="/logo.png"
-          alt="Agent Cockpit Logo"
-          style={{
-            width: '32px',
-            height: '32px',
-            borderRadius: '6px',
-            objectFit: 'contain',
-            border: '1px solid var(--hair)',
-            boxShadow: '0 0 10px rgba(52, 217, 150, 0.2)',
-            flexShrink: 0
-          }}
-        />
-        <div style={{ minWidth: 0, flex: 1 }}>
-          <h1>AGENT COCKPIT / <span className="zh">DISPATCH CENTER</span></h1>
-          <p>TASKS → AGENTS → OUTPUTS · REAL-TIME AI TELEMETRY · <b id="clock">{clockStr || '--:--:--'}</b></p>
-        </div>
+      <div className="cell title">
+        <h1>AGENT COCKPIT / <span className="zh">DISPATCH CENTER</span></h1>
+        <p>TASKS → AGENTS → OUTPUTS · REAL-TIME AI TELEMETRY · <b id="clock">{clockStr || '--:--:--'}</b></p>
       </div>
       <div className={`cell stat ${hiIdx === 0 ? 'on' : ''}`}>
         <span className="k">TASKS<i>TOTAL</i></span>
